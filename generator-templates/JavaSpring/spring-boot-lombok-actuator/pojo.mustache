@@ -24,7 +24,7 @@ public class {{classname}}{{#parent}} extends {{{parent}}}{{/parent}}{{^parent}}
 {{#isContainer}}
 {{#description}}    /** {{description}} */{{/description}}
     {{#useBeanValidation}}@Valid{{/useBeanValidation}}
-    private {{>nullableDataType}} {{name}} = {{#isNullable}}JsonNullable.undefined(){{/isNullable}}{{^isNullable}}{{#required}}{{{defaultValue}}}{{/required}}{{^required}}null{{/required}}{{/isNullable}};
+    private {{>nullableDataType}} {{name}};
 {{/isContainer}}
 {{^isContainer}}
 {{#defaultValue}}
