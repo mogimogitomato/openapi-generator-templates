@@ -28,6 +28,7 @@ public class {{classname}}{{#parent}} extends {{{parent}}}{{/parent}}{{^parent}}
 {{/isContainer}}
 {{^isContainer}}
 {{#description}}    /** {{description}} */{{/description}}
+{{#defaultValue}}    @Builder.Default{{/defaultValue}}
     private {{>nullableDataType}} {{name}}{{#isNullable}} = JsonNullable.undefined(){{/isNullable}}{{^isNullable}}{{#defaultValue}} = {{{.}}}{{/defaultValue}}{{/isNullable}};
 {{/isContainer}}
 {{/vars}}
